@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
     <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,15 +9,36 @@
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">    
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <!--Hamburger Nav link
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    -->
     <title>The Galaxy Project</title>
 </head>
-</head>
+
 <body>
-    <nav>
-        <a href="/">Home</a>
+    <header>
+        <h1 class="main-title">The Galaxy Project</h1>
+        <nav class="topnav" id="myTopnav">
+            </nav>
+    </header>
+    <nav>       
+        <div class="topnav" id="myTopnav">
+            <a href="{{ url_for('home') }}" class="active">Galaxy Home</a>            
+            <div id="myLinks">
+                <a href="#news">Stars</a>
+                <a href="#contact">Planets</a>
+                <a href="#about">About</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i> 
+            </a>
+        </div>
     </nav>
 
     {% block content %}
     {% endblock %}
+    <footer>
+    </footer>    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>   
 </body>
 </html>

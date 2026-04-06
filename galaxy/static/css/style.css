@@ -2,3 +2,75 @@ body {
     background-color: black;
     color: white; /* So you can still see your text! */
 }
+
+.main-title {
+    font-size: 3rem;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.7);
+    font-size: clamp(2rem, 5vw, 4rem);
+    text-align: center; /* This is the gold standard for titles */
+    width: 100%;        /* Usually default, but ensures it fills the space */
+}
+
+
+
+
+
+
+
+/* 1. Basic Navbar Styling */
+.topnav {
+  background-color: black;
+  overflow: hidden;
+  position: relative; /* Keeps the icon anchored to the corner */
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* 2. Hide the links by default on mobile */
+#myLinks {
+  display: none;
+}
+
+/* 3. The Hamburger Icon */
+.topnav a.icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: black;
+}
+
+/* 4. THE RESPONSIVE CLASS (Triggered by JS) */
+/* When this class is added, we show the links stacked vertically */
+.topnav.responsive #myLinks {
+  display: block;
+}
+
+/* 5. Desktop View (Screen wider than 600px) */
+@media screen and (min-width: 600px) {
+  .topnav a {
+    float: left; /* Line them up horizontally */
+  }
+  #myLinks {
+    display: block; /* Always show links on desktop */
+  }
+  .topnav a.icon {
+    display: none; /* Hide hamburger on desktop */
+  }
+}
+
+
+
+
+/* Mobile (Screens smaller than 600px) 
+@media screen and (max-width: 600px) {
+    .main-title {
+        font-size: 2rem;       
+    }
+}
+/*

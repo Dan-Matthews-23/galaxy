@@ -3,6 +3,9 @@ To start server:
 OR
     flask --app hello run --debug  
 
+OR 
+    python run.py <-- use this one!
+
 To push gits: 
     git status - to check status
     git add . - to add changed files
