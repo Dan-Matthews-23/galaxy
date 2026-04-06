@@ -1,1 +1,12 @@
-To start server: flask --app hello run --debug
+To start server: 
+    flask --app hello run --debug
+OR
+    flask --app hello run --debug  
+
+To push gits: 
+    git status - to check status
+    git add . - to add changed files
+    git commit -m "DESCRIPTION OF CHANGES"
+    git push
+
+
