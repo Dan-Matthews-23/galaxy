@@ -19,9 +19,18 @@ def register():
         
         user = User(username=form.username.data, 
                     email=form.email.data, 
-                    password=hashed_password) # Save the SCRAMBLED version
-        
+                    password=hashed_password) # Save the SCRAMBLED version        
         db.session.add(user)
+        db.session.flush() # This 'pre-saves' the user to get their ID for the next steps
+
+
+        #Add these values to all models upon registration (income, attack, defense)      
+        #starting_income = Income(owner=user, credits=1000, crystal_ore=500)
+        #starting_military = Military(owner=user, fleet_size=5)
+
+        #db.session.add(starting_income)
+        #db.session.add(starting_military)
+        
         db.session.commit()
         flash('Your account has been created! You are now able to log in', 'success')
         return redirect(url_for('home'))
