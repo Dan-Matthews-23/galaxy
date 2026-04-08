@@ -3,5 +3,11 @@
 {% block content %}
     <h1>Welcome to the Galaxy</h1>
     <p>This content is being injected into the base template!</p>
+    <p>{% if current_user.is_authenticated %}
+    <h2>Welcome back, Commander {{ current_user.username }}!</h2>
+{% else %}
+    <h2>Welcome to the Galaxy. Please log in to begin.</h2>
+{% endif %}</p>
+
     
 {% endblock %}

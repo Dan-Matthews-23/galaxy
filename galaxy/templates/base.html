@@ -21,19 +21,24 @@
         <nav class="topnav" id="myTopnav">
             </nav>
     </header>
-    <nav>       
-        <div class="topnav" id="myTopnav">
-            <a href="{{ url_for('home') }}" class="active">Galaxy Home</a>            
-            <div id="myLinks">
-                <a href="#news">Stars</a>
-                <a href="#contact">Planets</a>
-                <a href="#about">About</a>
-            </div>
-            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
-                <i class="fa fa-bars"></i> 
-            </a>
-        </div>
-    </nav>
+    <nav>
+    <div class="topnav" id="myTopnav">
+        <a href="{{ url_for('home') }}" class="active">Galaxy Home</a> 
+        
+        {% if current_user.is_authenticated %}
+            <a href="#news">Stars</a>
+            <a href="#contact">Planets</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        {% else %}
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">Register</a>
+        {% endif %}
+
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i> 
+        </a>
+    </div>
+</nav>
     <main class="container">
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}

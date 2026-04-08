@@ -3,6 +3,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_bcrypt import Bcrypt  # 1. Add this import
+from flask_login import LoginManager # 1. Import the manager
 
 if os.path.exists("env.py"):
     import env  # noqa
@@ -21,5 +22,8 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 bcrypt = Bcrypt(app)  # 2. Initialize it here
+login_manager = LoginManager(app) # 2. Initialize it
+login_manager.login_view = 'login' # 3. Tells Flask where the login page is
+login_manager.login_message_category = 'info' # Makes the "Please log in" message look nice
 
 from galaxy import routes, models  # noqa
