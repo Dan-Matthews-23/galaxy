@@ -20,4 +20,4 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
-from galaxy import routes  # noqa
+from galaxy import routes, models  # noqa

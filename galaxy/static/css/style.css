@@ -3,6 +3,23 @@ body {
     color: white; /* So you can still see your text! */
 }
 
+.alert {
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%; /* Keeps it from being too wide on desktops */
+}
+
+.alert-success {
+    background-color: rgba(40, 167, 69, 0.2); /* Semi-transparent green */
+    color: #28a745;
+    border: 1px solid #28a745;
+}
+
+
+
+
 .main-title {
     font-size: 3rem;
     text-shadow: 0 0 10px rgba(0, 212, 255, 0.7);
