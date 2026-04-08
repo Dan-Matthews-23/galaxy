@@ -2,6 +2,7 @@ import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from flask_bcrypt import Bcrypt  # 1. Add this import
 
 if os.path.exists("env.py"):
     import env  # noqa
@@ -19,5 +20,6 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
+bcrypt = Bcrypt(app)  # 2. Initialize it here
 
 from galaxy import routes, models  # noqa
