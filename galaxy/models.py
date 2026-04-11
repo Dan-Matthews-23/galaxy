@@ -11,6 +11,7 @@ class User(db.Model, UserMixin): # Add UserMixin here
     email = db.Column(db.String(120), unique=True, nullable=False)
     # 60 characters is standard for a hashed password (Bcrypt)
     password = db.Column(db.String(60), nullable=False)
+    is_admin = db.Column(db.Boolean, default=False, server_default="0", nullable=False)
 
     ### RELATIONSHIP POINTERS (Commented out until tables are built) ###
     # income = db.relationship('Income', backref='owner', uselist=False)

@@ -1,9 +1,24 @@
-from flask import render_template, url_for, flash, redirect, request
+from flask import render_template, url_for, flash, redirect, request, abort
 from galaxy import app, db, bcrypt
 from galaxy.forms import RegistrationForm, LoginForm # Add LoginForm
 from galaxy.models import User
 from flask_login import login_user, current_user, logout_user, login_required # Add these
+from functools import wraps
 
+# --- 2. The Decorator (Paste it here) ---
+def admin_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if not current_user.is_authenticated or not current_user.is_admin:
+            abort(403)
+        return f(*args, **kwargs)
+    return decorated_function
+
+# --- 3. Your Routes (Using it here) ---
+@app.route("/admin/dashboard")
+@admin_required # This is how you "apply" the lock
+def admin_dashboard():
+    return render_template('admin.html')
 
 
 @app.route("/")
