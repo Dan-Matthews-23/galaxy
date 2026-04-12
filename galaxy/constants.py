@@ -10,7 +10,7 @@ CIV_DATA = {
         'motto': 'United we stand',
         'leader_title': 'Secretary-General',
         'short_description': 'A true united democracy to serve all mankind. The New United Nations favours debate over brute force and boasts an impressive defensive boost over the other civilisations',
-        'long_description': '',
+        'long_description': '',        
     },
 
     2: {
@@ -50,8 +50,63 @@ CIV_DATA = {
     },    
 }
 
+# constants.py
 
-# At the very bottom of constants.py
+TROOP_DATA = {
+    1: { # The New United Nations
+        'attack_units': [
+            {'level': 1, 'name': 'Peacekeeper Corps', 'cost': 150, 'power': 10},
+            {'level': 2, 'name': 'Aegis Vanguard', 'cost': 400, 'power': 30}
+        ],
+        'defense_units': [
+            {'level': 1, 'name': 'Guardian Garrison', 'cost': 100, 'power': 15}
+        ]
+    },
+    2: { # Future Corp
+        'attack_units': [
+            {'level': 1, 'name': 'Asset Recovery Team', 'cost': 200, 'power': 12},
+            {'level': 2, 'name': 'Hostile Takeover Division', 'cost': 500, 'power': 35}
+        ],
+        
+    }
+    2: { # The State
+        'attack_units': [
+            {'level': 1, 'name': 'Asset Recovery Team', 'cost': 200, 'power': 12},
+            {'level': 2, 'name': 'Hostile Takeover Division', 'cost': 500, 'power': 35}
+        ],        
+    }
+    2: { # The Conclave
+        'attack_units': [
+            {'level': 1, 'name': 'Asset Recovery Team', 'cost': 200, 'power': 12},
+            {'level': 2, 'name': 'Hostile Takeover Division', 'cost': 500, 'power': 35}
+        ],        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 if __name__ == "__main__":
     print(f"{'ID':<4} | {'CIVILIZATION':<25} | {'INC':<5} | {'ATK':<5} | {'DEF':<5} | {'INT':<5}")
