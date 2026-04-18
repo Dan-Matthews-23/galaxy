@@ -55,32 +55,76 @@ CIV_DATA = {
 TROOP_DATA = {
     1: { # The New United Nations
         'attack_units': [
-            {'level': 1, 'name': 'Peacekeeper Corps', 'cost': 150, 'power': 10},
-            {'level': 2, 'name': 'Aegis Vanguard', 'cost': 400, 'power': 30}
+            {'level': 1, 'name': 'Infantry Regiment', 'initial_cost': 1000, 'maintenance_cost': 500, 'power': 100,},
+ 	        {'level': 2, 'name': 'Specialist Regiment', 'initial_cost': 2000, 'maintenance_cost': 1000, 'power': 200,},            
         ],
-        'defense_units': [
-            {'level': 1, 'name': 'Guardian Garrison', 'cost': 100, 'power': 15}
+        'defense_units': [ #x1.5 boost
+            {'level': 1, 'name': 'Homeguard Regiment', 'initial_cost': 1000, 'maintenance_cost': 500, 'power': 150,},
+ 	        {'level': 2, 'name': 'Peacekeeper', 'initial_cost': 2000, 'maintenance_cost': 1000, 'power': 300,}, 
+        ]
+        'intel_units': [
+            {'level': 1, 'name': 'Intelligence Enforcer', 'initial_cost': 1000, 'maintenance_cost': 500, 'power': 100,},
+ 	        {'level': 2, 'name': 'Intelligence Specialist', 'initial_cost': 2000, 'maintenance_cost': 1000, 'power': 200,}, 
+        ]
+        'income_units': [
+            {'level': 1, 'name': 'Employed Citizens', 'initial_cost': 1000, 'maintenance_cost': 500, 'power': 100,},
+ 	        {'level': 2, 'name': 'Specialist Citizens', 'initial_cost': 2000, 'maintenance_cost': 1000, 'power': 200,}, 
         ]
     },
     2: { # Future Corp
         'attack_units': [
-            {'level': 1, 'name': 'Asset Recovery Team', 'cost': 200, 'power': 12},
-            {'level': 2, 'name': 'Hostile Takeover Division', 'cost': 500, 'power': 35}
+            {'level': 1, 'name': 'Infantry Regiment', 'initial_cost': 1000, 'maintenance_cost': 500, 'power': 100,},
+ 	        {'level': 2, 'name': 'Specialist Regiment', 'initial_cost': 2000, 'maintenance_cost': 1000, 'power': 200,},            
         ],
-        
-    }
+        'defense_units': [ 
+            {'level': 1, 'name': 'Homeguard Regiment', 'initial_cost': 1000, 'maintenance_cost': 500, 'power': 100,},
+ 	        {'level': 2, 'name': 'Peacekeeper', 'initial_cost': 2000, 'maintenance_cost': 1000, 'power': 200,}, 
+        ]
+        'intel_units': [
+            {'level': 1, 'name': 'Intelligence Enforcer', 'initial_cost': 1000, 'maintenance_cost': 500, 'power': 100,},
+ 	        {'level': 2, 'name': 'Intelligence Specialist', 'initial_cost': 2000, 'maintenance_cost': 1000, 'power': 200,}, 
+        ]
+        'income_units': [ #x1.5 boost
+            {'level': 1, 'name': 'Employed Citizens', 'initial_cost': 1000, 'maintenance_cost': 500, 'power': 150,},
+ 	        {'level': 2, 'name': 'Specialist Citizens', 'initial_cost': 2000, 'maintenance_cost': 1000, 'power': 300,}, 
+        ]
+    },
     2: { # The State
         'attack_units': [
-            {'level': 1, 'name': 'Asset Recovery Team', 'cost': 200, 'power': 12},
-            {'level': 2, 'name': 'Hostile Takeover Division', 'cost': 500, 'power': 35}
-        ],        
-    }
+            {'level': 1, 'name': 'Infantry Regiment', 'initial_cost': 1000, 'maintenance_cost': 500, 'power': 100,},
+ 	        {'level': 2, 'name': 'Specialist Regiment', 'initial_cost': 2000, 'maintenance_cost': 1000, 'power': 200,},            
+        ],
+        'defense_units': [ 
+            {'level': 1, 'name': 'Homeguard Regiment', 'initial_cost': 1000, 'maintenance_cost': 500, 'power': 100,},
+ 	        {'level': 2, 'name': 'Peacekeeper', 'initial_cost': 2000, 'maintenance_cost': 1000, 'power': 200,}, 
+        ]
+        'intel_units': [ #x1.5 boost
+            {'level': 1, 'name': 'Intelligence Enforcer', 'initial_cost': 1000, 'maintenance_cost': 500, 'power': 150,},
+ 	        {'level': 2, 'name': 'Intelligence Specialist', 'initial_cost': 2000, 'maintenance_cost': 1000, 'power': 300,}, 
+        ]
+        'income_units': [ 
+            {'level': 1, 'name': 'Employed Citizens', 'initial_cost': 1000, 'maintenance_cost': 500, 'power': 100,},
+ 	        {'level': 2, 'name': 'Specialist Citizens', 'initial_cost': 2000, 'maintenance_cost': 1000, 'power': 200,}, 
+        ]
+    },
     2: { # The Conclave
-        'attack_units': [
-            {'level': 1, 'name': 'Asset Recovery Team', 'cost': 200, 'power': 12},
-            {'level': 2, 'name': 'Hostile Takeover Division', 'cost': 500, 'power': 35}
-        ],        
-    }
+        'attack_units': [ #x1.5 boost
+            {'level': 1, 'name': 'Infantry Regiment', 'initial_cost': 1000, 'maintenance_cost': 500, 'power': 150,},
+ 	        {'level': 2, 'name': 'Specialist Regiment', 'initial_cost': 2000, 'maintenance_cost': 1000, 'power': 300,},            
+        ],
+        'defense_units': [ 
+            {'level': 1, 'name': 'Homeguard Regiment', 'initial_cost': 1000, 'maintenance_cost': 500, 'power': 100,},
+ 	        {'level': 2, 'name': 'Peacekeeper', 'initial_cost': 2000, 'maintenance_cost': 1000, 'power': 200,}, 
+        ]
+        'intel_units': [ 
+            {'level': 1, 'name': 'Intelligence Enforcer', 'initial_cost': 1000, 'maintenance_cost': 500, 'power': 100,},
+ 	        {'level': 2, 'name': 'Intelligence Specialist', 'initial_cost': 2000, 'maintenance_cost': 1000, 'power': 200,}, 
+        ]
+        'income_units': [ 
+            {'level': 1, 'name': 'Employed Citizens', 'initial_cost': 1000, 'maintenance_cost': 500, 'power': 100,},
+ 	        {'level': 2, 'name': 'Specialist Citizens', 'initial_cost': 2000, 'maintenance_cost': 1000, 'power': 200,}, 
+        ]
+    },
 }
 
 
