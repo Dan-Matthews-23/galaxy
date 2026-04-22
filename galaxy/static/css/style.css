@@ -1,44 +1,147 @@
+/* ---------------------------------Global elements */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     background-color: black;
-    color: white; /* So you can still see your text! */
+    color: white; 
 }
 
-.alert {
-    padding: 15px;
-    margin: 10px auto;
-    border-radius: 5px;
-    text-align: center;
-    width: 80%; /* Keeps it from being too wide on desktops */
+.white-border {
+  border: 1px solid white;
 }
-
-.alert-success {
-    background-color: rgba(40, 167, 69, 0.2); /* Semi-transparent green */
-    color: #28a745;
-    border: 1px solid #28a745;
-}
-
-
-
 
 .main-title {
     font-size: 3rem;
     text-shadow: 0 0 10px rgba(0, 212, 255, 0.7);
     font-size: clamp(2rem, 5vw, 4rem);
-    text-align: center; /* This is the gold standard for titles */
-    width: 100%;        /* Usually default, but ensures it fills the space */
+    text-align: center; 
+    width: 100%;        
 }
 
+.parent-container {
+  width: 95%;
+  padding: 5px;
+  border: 1px solid blue; 
+  margin: 0 auto;          
+}
+
+.text-box {
+  color: black;
+  text-align:center;
+}
+
+.btn-submit {
+    background-color: #000000; 
+    color: #ffffff;           
+    padding: 12px 24px;
+    border: 1px solid #333;   
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase; 
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    width: 100%;               
+}
+
+.btn-submit:hover {
+    background-color: #333333; 
+    border-color: #555555;     
+}
+
+.btn-submit:active {
+    background-color: #444444;
+    transform: translateY(1px); /
+}
+/* ---------------------------------End of Global elements */
+
+
+
+
+/* ---------------------------------Form elements (register, login */
+.form-group {
+    margin-bottom: 1.5rem; 
+    text-align: center;      
+    width: 100%;           
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.form-group input {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+/* ---------------------------------End of form elements */
 
 
 
 
 
 
-/* 1. Basic Navbar Styling */
+
+
+
+/* ---------------------------------Login and Register elements */
+.register-login-container {
+  width: 50%;  
+  border: 1px solid red; 
+  margin: 0 auto;          
+}
+
+.alert-danger {
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%; 
+}
+
+.alert-success {
+    background-color: rgba(40, 167, 69, 0.2); 
+    color: #28a745;
+    border: 1px solid #28a745;
+}
+
+.alert {
+    border: 5px solid #00ff00 !important; /* Bright Neon Green */
+    color: #00ff00 !important;
+    background: #000 !important;
+    padding: 20px;
+    z-index: 9999;
+    position: relative;
+}
+/* ---------------------------------End of Login and Register elements */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------Nav Bar */
 .topnav {
   background-color: black;
   overflow: hidden;
-  position: relative; /* Keeps the icon anchored to the corner */
+  position: relative; 
 }
 
 .topnav a {
@@ -49,12 +152,12 @@ body {
   display: block;
 }
 
-/* 2. Hide the links by default on mobile */
+
 #myLinks {
   display: none;
 }
 
-/* 3. The Hamburger Icon */
+
 .topnav a.icon {
   position: absolute;
   right: 0;
@@ -62,22 +165,26 @@ body {
   background: black;
 }
 
-/* 4. THE RESPONSIVE CLASS (Triggered by JS) */
-/* When this class is added, we show the links stacked vertically */
 .topnav.responsive #myLinks {
   display: block;
 }
+/* ---------------------------------End of Nav Bar */
 
-/* 5. Desktop View (Screen wider than 600px) */
+
+
+
+
+
+/* ---------------------------------Media Queries */
 @media screen and (min-width: 600px) {
   .topnav a {
-    float: left; /* Line them up horizontally */
+    float: left; 
   }
   #myLinks {
-    display: block; /* Always show links on desktop */
+    display: block;
   }
   .topnav a.icon {
-    display: none; /* Hide hamburger on desktop */
+    display: none; 
   }
 }
 
